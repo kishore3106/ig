@@ -41,6 +41,12 @@ Publish the website in the given URL.
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 70px;
     }
+    footer{
+        background-color: black;
+        color: aliceblue;
+        border-radius: 10px;
+        width: 20%;
+    }
     .main{
         display: flex;
         flex-wrap: wrap;
@@ -67,6 +73,7 @@ Publish the website in the given URL.
     }
 
     .f{
+        display: flex;
         border-radius: 40px;
         position: relative;
         top: 0%;
@@ -115,13 +122,15 @@ Publish the website in the given URL.
             });
         </script>
     </body>
+    <footer align="center">
+        Designed and Developed by KISHORE B
+    </footer>
 </html>
 ```
 ## OUTPUT:
 
 ![alt text](1.png)
 ![alt text](2.png)
-![alt text](3.png)
 
 ## RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
