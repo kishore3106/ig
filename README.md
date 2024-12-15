@@ -26,105 +26,148 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 ```
-<html>
-    <head>
-<style>
-    body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: radial-gradient(violet,darkblue);
-    }
-    h1{
-        margin: 50;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 70px;
-    }
-    footer{
-        background-color: black;
-        color: aliceblue;
-        border-radius: 10px;
-        width: 20%;
-    }
-    .main{
-        display: flex;
-        flex-wrap: wrap;
-        border: 2px solid black;
-        border-radius: 40px;
-        background: radial-gradient(purple,darkblue);
-        width: 70%;
-        height: 70%;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-    }
-    .n{
-        
-        border-radius: 20px;
-        width: 27%;
-        height: 30%;
-        margin: auto;
-        transition: transform 0.3s ease; 
-        cursor: pointer;
-    }
-    .n:hover{
-        transform: scale(1.1);
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1{
+            color: antiquewhite;
+            text-shadow: 0 0 10px black, 0 0 20px black;
+            position: relative;
+            bottom: 27px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 50px;
+        }
+        html{
+            background-color: black;
+        }
+        body{
+            background: radial-gradient(white,black);
+            border: 2px solid black;
+            border-radius: 50px;
+            height: 850px;
+            width: 1515px;
+        }
+        .main {
+            background-color: black;
+            height: 80%;
+            width: 68%;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+        }
 
-    .f{
-        display: flex;
-        border-radius: 40px;
-        position: relative;
-        top: 0%;
-        bottom: 50%;
-        width: 940px;
-        height: 528px;
-    }
-    .hidden {
-        display: none;
-    }
-</style>
+        .m1 {
+            margin: 10px;
+            height: 650px;
+            width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: scroll;
+            justify-content: space-around;
+            align-items: center;
+            transition: all 1.5s ease;
+        }
+        .m1::-webkit-scrollbar {
+            width: 0px; 
+            height: 0px; 
+        }
+        .m2{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin: 10px;
+            opacity: 0;
+            width: 0px;
+            height: 0px;
+            transition: all 1.5s ease, opacity 0.4s;
+            visibility: hidden;
+        }
 
-    </head>
-    <title>Thamizh Gallery</title>
-    <body >
-        <h1 align="center">THAMIZH GALLERY</h1>
-        <div class="main">
-            <img src="v.webp" alt="Vijay" class="n" id="ni">
-            <img src="a1.webp" alt="Ajith" class="n" id="ni">
-            <img src="s.webp" alt="Surya" class="n" id="ni">
-            <img src="r.jpg" alt="Rajini" class="n" id="ni">
-            <img src="vi.jpg" alt="Vishal" class="n" id="ni">
-            <img src="vik.webp" alt="Vikram" class="n" id="ni">
+        img {
+            margin: 10px;
+            width: 300px;
+            height: 300px;
+            transition: transform 0.5s ease;
+            cursor: pointer;
+        }
+        #i{
+            border-radius: 10px;
+        }
+        #i:hover{
+            transform: scale(1.1);
+        }
+        #ii{
+            border-radius: 10px;
+            width: 96%;
+            height: auto;
+        }
+
+        .m1.shrink {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 350px;
+            overflow: scroll;
+            transition: all 1.5s ease;
+        }
+        .m1.shrink::-webkit-scrollbar {
+            width: 0px; 
+            height: 0px; 
+        }
+        .m2.grow{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            margin: 10px;
+            width: 650px;
+            height: 650px;
+            opacity: 1; /* Fully visible */
+            visibility: visible; /* Interactable */
+            transition: all 1.5s ease, opacity 0.5s ease;  
+        }
+    </style>
+</head>
+<title>SAMPLE</title>
+<body>
+    <h1 align="center">THAMIZH GALLERY</h1>
+    <div class="main">
+        <div class="m1">
+            <img src="vik.webp" alt="" id="i" onclick="f(this)">
+            <img src="vi.jpg" alt="" id="i" onclick="f(this)">
+            <img src="v.webp" alt="" id="i" onclick="f(this)">
+            <img src="s.webp" alt="" id="i" onclick="f(this)">
+            <img src="r.jpg" alt="" id="i" onclick="f(this)">
+            <img src="a1.webp" alt="" id="i" onclick="f(this)">
         </div>
-        <script type="text/javascript">
-            const images = document.querySelectorAll('.n');
-        
-            images.forEach(function(img) {
-                img.addEventListener("click", function() {
-                    
-                    images.forEach(function(image) {
-                        if (image !== img) {
-                            image.classList.add('hidden');
-                        }
-                    });
-                    
-                    img.classList.add('f');
-                });
-        
-                img.addEventListener("dblclick", function() {
-                    
-                    images.forEach(function(image) {
-                        image.classList.remove('hidden', 'f');
-                    });
-                });
-            });
-        </script>
-    </body>
-    <footer align="center">
-        Designed and Developed by KISHORE B
-    </footer>
+        <div class="m2" id="iii" id="i" onclick="c()">
+            <img src="" alt="" id="ii">
+        </div>
+    </div>
+
+    <script>
+        var a=document.getElementById('iii');
+        var b=document.getElementById('ii');
+        const d=document.querySelector('.m1');
+        const d1=document.querySelector('.m2');
+        function f(img) {
+            d1.classList.add('grow');
+            d.classList.add('shrink');
+            a.style.display='flex';
+            b.src=img.src;
+        }
+        function c(){
+            d1.classList.remove('grow');
+            d.classList.remove('shrink');
+        }
+    </script>
+</body>
 </html>
 ```
 ## OUTPUT:
