@@ -32,7 +32,7 @@ Publish the website in the given URL.
     <style>
         h1{
             color: antiquewhite;
-            text-shadow: 0 0 10px black, 0 0 20px black;
+            text-shadow: 0 0 10px purple, 0 0 20px purple, 0 0 30px purple;
             position: relative;
             bottom: 27px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -42,7 +42,7 @@ Publish the website in the given URL.
             background-color: black;
         }
         body{
-            background: radial-gradient(white,black);
+            background: radial-gradient(purple,black);
             border: 2px solid black;
             border-radius: 50px;
             height: 850px;
@@ -64,6 +64,8 @@ Publish the website in the given URL.
         }
 
         .m1 {
+            border-radius: 20px;
+            background-color: rgb(44, 4, 44);
             margin: 10px;
             height: 650px;
             width: 1000px;
@@ -132,6 +134,15 @@ Publish the website in the given URL.
             visibility: visible; /* Interactable */
             transition: all 1.5s ease, opacity 0.5s ease;  
         }
+        footer{
+            background-color: white;
+            border-radius: 30px;
+            width: 25%;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            translate: -50%;
+        }
     </style>
 </head>
 <title>SAMPLE</title>
@@ -150,6 +161,9 @@ Publish the website in the given URL.
             <img src="" alt="" id="ii">
         </div>
     </div>
+    <footer align="center">
+        DESIGNED and DEVELOPED by KISHORE B
+    </footer>
 
     <script>
         var a=document.getElementById('iii');
@@ -169,6 +183,7 @@ Publish the website in the given URL.
     </script>
 </body>
 </html>
+
 ```
 ## OUTPUT:
 
